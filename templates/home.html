@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="limiter">
+    <div class="container-login100">
+        <div class="wrap-login100 p-t-50 p-b-90">
+            <span class="login100-form-title p-b-51">
+                Chess Game<br>
+                Welcome to our chess commentary generator!<br>
+            </span>
+
+            <!-- Launch Chess Game Button -->
+            <div class="container-login100-form-btn m-t-17">
+                <a class="login100-form-btn" href="{{ url_for('launch') }}">
+                    Start Chess Game
+                </a>
+                
+            </div>
+
+            <!-- Logout Button -->
+            <div class="container-login100-form-btn m-t-17">
+                <a href="{{ url_for('logout') }}" class="login100-form-btn">
+                    Logout
+                </a>
+            </div>
+            
+            <form action="/ready" method="post">
+                <button type="submit">READY</button>
+            </form>
+            
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="limiter">
+    <div class="container-login100">
+        <div class="wrap-login100 p-t-50 p-b-90">
+            <span class="login100-form-title p-b-51">
+                🎉 Chess Game Launched!
+            </span>
+            <p style="text-align: center; font-size: 18px;">
+                Your game has opened in a new window.<br>
+                Play the game and enjoy live commentary!
+            </p>
+
+            <!-- READY Button -->
+            <form action="{{ url_for('ready') }}" method="post">
+                <div class="container-login100-form-btn m-t-17">
+                    <button class="login100-form-btn" type="submit">READY</button>
+                </div>
+            </form>
+
+            <div class="container-login100-form-btn m-t-17">
+                <a class="login100-form-btn" href="{{ url_for('index') }}">Back to Home</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

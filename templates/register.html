@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block content %}
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100 p-t-50 p-b-90">
+
+				<!-- Welcome Message -->
+				<div style="text-align: center; margin-bottom: 20px;">
+					<h2>Welcome to the Interactive Chess Game!</h2>
+					<p>Create an account to begin playing and enjoy live commentary.</p>
+				</div>
+
+				<!-- Optional Message -->
+				{% if message %}
+					<p style="color: red; text-align: center;">{{ message }}</p>
+				{% endif %}
+
+				<form class="login100-form validate-form flex-sb flex-w" method="POST" action="/register/">
+					<span class="login100-form-title p-b-51">
+						Register
+					</span>
+
+					<div class="wrap-input100 validate-input m-b-16" data-validate="Username is required">
+						<input class="input100" type="text" name="username" placeholder="Username" required>
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input m-b-16" data-validate="Password is required">
+						<input class="input100" type="password" name="password" placeholder="Password" required>
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="flex-sb-m w-full p-t-3 p-b-24">
+						<div>
+							<a href="{{ url_for('login') }}" class="txt1">
+								Already registered? Log in
+							</a>
+						</div>
+					</div>
+
+					<div class="container-login100-form-btn m-t-17">
+						<button class="login100-form-btn">
+							Register
+						</button>
+					</div>
+				</form>
+
+			</div>
+		</div>
+	</div>
+{% endblock %}

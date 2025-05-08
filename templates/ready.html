@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="limiter">
+    <div class="container-login100">
+        <div class="wrap-login100 p-t-50 p-b-90">
+            <span class="login100-form-title p-b-51">
+                ♟️ Chess Game Begins Now!
+            </span>
+            <p style="text-align: center; font-size: 18px;">
+                The game is starting in a separate window.<br>
+                Enjoy the live commentary and good luck!
+            </p>
+            <div class="container-login100-form-btn m-t-17">
+                <a class="login100-form-btn" href="{{ url_for('index') }}">Back to Home</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
